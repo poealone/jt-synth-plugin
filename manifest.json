@@ -1,0 +1,50 @@
+{
+  "name": "JT Synth",
+  "version": "4.0.0",
+  "author": "Johnytiger",
+  "description": "Dual-oscillator wavetable synth with multimode filter, gate, built-in reverb + delay, and EDM presets",
+  "type": "synth",
+  "library": "jt-synth.so",
+  "params": [
+    { "name": "Osc1Wave",   "default": 0.55, "widget": "knob",   "orientation": "radial", "navGroup": "knobs", "navOrder": 0 },
+    { "name": "Osc2Wave",   "default": 0.0,  "widget": "knob",   "orientation": "radial", "navGroup": "knobs", "navOrder": 1 },
+    { "name": "Osc2Vol",    "default": 0.5,  "widget": "knob",   "orientation": "radial", "navGroup": "knobs", "navOrder": 2 },
+    { "name": "Detune",     "default": 0.08, "widget": "knob",   "orientation": "radial", "navGroup": "knobs", "navOrder": 3 },
+    { "name": "FilterType", "default": 0.0,  "widget": "select", "navGroup": "knobs", "navOrder": 4, "options": ["LP", "HP", "BP"] },
+    { "name": "Attack",     "default": 0.01, "widget": "knob",   "orientation": "radial", "navGroup": "knobs", "navOrder": 5 },
+    { "name": "Decay",      "default": 0.15, "widget": "knob",   "orientation": "radial", "navGroup": "knobs", "navOrder": 6 },
+    { "name": "Sustain",    "default": 0.8,  "widget": "knob",   "orientation": "radial", "navGroup": "knobs", "navOrder": 7 },
+    { "name": "Release",    "default": 0.15, "widget": "knob",   "orientation": "radial", "navGroup": "knobs", "navOrder": 8 },
+    { "name": "FilterEnv",  "default": 0.5,  "widget": "knob",   "orientation": "radial", "navGroup": "knobs", "navOrder": 9 },
+    { "name": "Cutoff",     "default": 0.75, "widget": "knob",   "orientation": "radial", "navGroup": "knobs", "navOrder": 10 },
+    { "name": "Resonance",  "default": 0.2,  "widget": "knob",   "orientation": "radial", "navGroup": "knobs", "navOrder": 11 },
+    { "name": "GateOn",     "default": 0.0,  "widget": "toggle", "navGroup": "knobs", "navOrder": 12 },
+    { "name": "GateRate",   "default": 0.0,  "widget": "select", "navGroup": "knobs", "navOrder": 13, "options": ["1/4", "1/8", "1/16", "1/32"] },
+    { "name": "GateDepth",  "default": 0.8,  "widget": "knob",   "orientation": "radial", "navGroup": "knobs", "navOrder": 14 },
+    { "name": "ReverbOn",   "default": 0.0,  "widget": "toggle", "navGroup": "knobs", "navOrder": 15 },
+    { "name": "ReverbMix",  "default": 0.25, "widget": "knob",   "orientation": "radial", "navGroup": "knobs", "navOrder": 16 },
+    { "name": "ReverbSize", "default": 0.55, "widget": "knob",   "orientation": "radial", "navGroup": "knobs", "navOrder": 17 },
+    { "name": "DelayOn",    "default": 0.0,  "widget": "toggle", "navGroup": "knobs", "navOrder": 18 },
+    { "name": "DelayTime",  "default": 0.35, "widget": "knob",   "orientation": "radial", "navGroup": "knobs", "navOrder": 19 },
+    { "name": "DelayFbk",   "default": 0.4,  "widget": "knob",   "orientation": "radial", "navGroup": "knobs", "navOrder": 20 },
+    { "name": "DelayMix",   "default": 0.25, "widget": "knob",   "orientation": "radial", "navGroup": "knobs", "navOrder": 21 }
+  ],
+  "ui": {
+    "accent": [255, 30, 60],
+    "layout": "knobs",
+    "pages": true,
+    "navGroups": {
+      "knobs": { "layout": "grid", "cols": 8, "wrap": false }
+    },
+    "viz": {
+      "type": "waveform",
+      "x": 6,
+      "y": 14,
+      "w": 300,
+      "h": 32,
+      "color": [255, 30, 60],
+      "reactive": true,
+      "bars": 16
+    }
+  }
+}
